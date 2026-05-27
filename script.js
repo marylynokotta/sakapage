@@ -20,26 +20,44 @@ counters.forEach(counter => {
   updateCounter();
 });
 
-// WATCH HIGHLIGHTS BUTTON
-const modal = document.getElementById('highlightsModal');
+// HIGHLIGHTS MODAL
+const highlightsModal = document.getElementById('highlightsModal');
 const modalClose = document.getElementById('modalClose');
 
 document.querySelector('.primary-btn').addEventListener('click', () => {
-  modal.classList.add('open');
+  highlightsModal.classList.add('open');
+  document.body.classList.add('modal-open');
 });
 
 modalClose.addEventListener('click', () => {
-  modal.classList.remove('open');
+  highlightsModal.classList.remove('open');
+  document.body.classList.remove('modal-open');
 });
 
-// close when clicking outside the modal box
-modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
-    modal.classList.remove('open');
+highlightsModal.addEventListener('click', (e) => {
+  if (e.target === highlightsModal) {
+    highlightsModal.classList.remove('open');
+    document.body.classList.remove('modal-open');
   }
 });
 
-// VIEW STATS BUTTON
-document.querySelector('.secondary-btn').addEventListener('click', () => {
-  document.getElementById('stats').scrollIntoView({ behavior: 'smooth' });
+// READ MORE MODAL
+const readMoreModal = document.getElementById('readMoreModal');
+const readMoreClose = document.getElementById('readMoreClose');
+
+document.querySelector('.about .primary-btn').addEventListener('click', () => {
+  readMoreModal.classList.add('open');
+  document.body.classList.add('modal-open');
+});
+
+readMoreClose.addEventListener('click', () => {
+  readMoreModal.classList.remove('open');
+  document.body.classList.remove('modal-open');
+});
+
+readMoreModal.addEventListener('click', (e) => {
+  if (e.target === readMoreModal) {
+    readMoreModal.classList.remove('open');
+    document.body.classList.remove('modal-open');
+  }
 });
