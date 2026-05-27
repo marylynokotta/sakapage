@@ -2,9 +2,13 @@
       margin:0;
       padding:0;
       box-sizing:border-box;
-      scroll-behavior:smooth;
+      
     }
 
+html{
+    scroll-behavior:smooth;
+
+}
     body{
       font-family: 'Montserrat', sans-serif;
       background:#0b0f1a;
@@ -12,9 +16,7 @@
       overflow-x:hidden;
     }
 
-    /* =========================
-       NAVBAR
-    ==========================*/
+    /*NAVBAR*/
     nav{
       width:100%;
       position:fixed;
@@ -53,9 +55,7 @@
       color:#00ff88;
     }
 
-    /* =========================
-       HERO SECTION
-    ==========================*/
+    /*HERO SECTION*/
     .hero{
       min-height:100vh;
       display:flex;
@@ -158,15 +158,26 @@
       }
     }
 
-    /* =========================
-       STATS
-    ==========================*/
+    /*STATS*/
     .stats{
       display:grid;
       grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
       gap:30px;
       padding:80px 10%;
       background:#111827;
+    }
+
+    .stats-title{
+      text-align:center;
+      margin-bottom:60px;
+    }
+
+    .stats-title h2{
+      font-size:50px;
+    }
+
+    .stats-title span{
+      color:#00ff88;
     }
 
     .stat-card{
@@ -194,9 +205,7 @@
       font-size:18px;
     }
 
-    /* =========================
-       ABOUT
-    ==========================*/
+    /*ABOUT*/
     .about{
       padding:120px 10%;
       display:grid;
@@ -225,9 +234,7 @@
       margin-bottom:20px;
     }
 
-    /* =========================
-       GALLERY
-    ==========================*/
+    /*GALLERY*/
     .gallery{
       padding:100px 10%;
       background:#111827;
@@ -264,9 +271,7 @@
       transform:scale(1.05);
     }
 
-    /* =========================
-       FOOTER
-    ==========================*/
+    /*FOOTER*/
     footer{
       padding:40px 10%;
       text-align:center;
@@ -275,9 +280,7 @@
       border-top:1px solid rgba(255,255,255,0.1);
     }
 
-    /* =========================
-       RESPONSIVE
-    ==========================*/
+    /*RESPONSIVE*/
     @media(max-width:1000px){
 
       .hero{
