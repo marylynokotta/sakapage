@@ -1,4 +1,5 @@
- const counters = document.querySelectorAll('.counter');
+ // COUNTER ANIMATION
+const counters = document.querySelectorAll('.counter');
 
 counters.forEach(counter => {
   counter.innerText = '0';
@@ -20,8 +21,22 @@ counters.forEach(counter => {
 });
 
 // WATCH HIGHLIGHTS BUTTON
+const modal = document.getElementById('highlightsModal');
+const modalClose = document.getElementById('modalClose');
+
 document.querySelector('.primary-btn').addEventListener('click', () => {
-  alert('🎥 Highlights Coming Soon!');
+  modal.classList.add('open');
+});
+
+modalClose.addEventListener('click', () => {
+  modal.classList.remove('open');
+});
+
+// close when clicking outside the modal box
+modal.addEventListener('click', (e) => {
+  if (e.target === modal) {
+    modal.classList.remove('open');
+  }
 });
 
 // VIEW STATS BUTTON
