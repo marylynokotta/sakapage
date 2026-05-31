@@ -1,4 +1,4 @@
- // COUNTER ANIMATION
+// COUNTER ANIMATION
 const counters = document.querySelectorAll('.counter');
 
 counters.forEach(counter => {
@@ -24,7 +24,7 @@ counters.forEach(counter => {
 const highlightsModal = document.getElementById('highlightsModal');
 const modalClose = document.getElementById('modalClose');
 
-document.querySelector('.primary-btn').addEventListener('click', () => {
+document.getElementById('highlightsBtn').addEventListener('click', () => {
   highlightsModal.classList.add('open');
   document.body.classList.add('modal-open');
 });
@@ -45,7 +45,7 @@ highlightsModal.addEventListener('click', (e) => {
 const readMoreModal = document.getElementById('readMoreModal');
 const readMoreClose = document.getElementById('readMoreClose');
 
-document.querySelector('.about .primary-btn').addEventListener('click', () => {
+document.getElementById('readMoreBtn').addEventListener('click', () => {
   readMoreModal.classList.add('open');
   document.body.classList.add('modal-open');
 });
@@ -60,4 +60,9 @@ readMoreModal.addEventListener('click', (e) => {
     readMoreModal.classList.remove('open');
     document.body.classList.remove('modal-open');
   }
+});
+
+// VIEW STATS BUTTON
+document.querySelector('.secondary-btn').addEventListener('click', () => {
+  document.getElementById('stats').scrollIntoView({ behavior: 'smooth' });
 });
