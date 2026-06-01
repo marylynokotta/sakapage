@@ -348,6 +348,8 @@ html{
   max-width: 900px;
   position: relative;
   border: 1px solid rgba(0, 255, 136, 0.2);
+  overflow:visible; 
+
 }
 
 .modal-content h2 {
@@ -360,18 +362,19 @@ html{
   color: #00ff88;
 }
 
-.modal-close {
-  position: absolute;
-  top: 15px;
-  right: 20px;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 22px;
-  cursor: pointer;
-  transition: 0.3s;
-  
+.modal-close{
+  position:absolute;
+  top:15px;
+  right:20px;
+  background:transparent;
+  border:none;
+  color:white;
+  font-size:22px;
+  cursor:pointer;
+  z-index:9999;   /* add this */
 }
+
+
 
 .modal-close:hover {
   color: #00ff88;
