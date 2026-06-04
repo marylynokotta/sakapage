@@ -66,3 +66,17 @@ readMoreModal.addEventListener('click', (e) => {
 document.querySelector('.secondary-btn').addEventListener('click', () => {
   document.getElementById('stats').scrollIntoView({ behavior: 'smooth' });
 });
+
+// SCROLL REVEAL
+const revealElements = document.querySelectorAll('.stats, .about, .gallery, .stat-card, .bio-card, .gallery-grid img');
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('reveal');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+revealElements.forEach(el => revealObserver.observe(el));

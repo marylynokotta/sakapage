@@ -453,3 +453,23 @@ footer{
     font-size:26px;
 }
 }
+
+/* SCROLL REVEAL */
+.stats,
+.about,
+.gallery,
+.stat-card,
+.gallery-grid img {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stats.reveal,
+.about.reveal,
+.gallery.reveal,
+.stat-card.reveal,
+.gallery-grid img.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
