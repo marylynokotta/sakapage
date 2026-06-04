@@ -454,7 +454,6 @@ footer{
 }
 }
 
-/* SCROLL REVEAL */
 .stats,
 .about,
 .gallery,
@@ -465,6 +464,7 @@ footer{
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
+/* Active reveal */
 .stats.reveal,
 .about.reveal,
 .gallery.reveal,
@@ -473,3 +473,14 @@ footer{
   opacity: 1;
   transform: translateY(0);
 }
+
+/* Staggered delays for stat cards */
+.stat-card:nth-child(1) { transition-delay: 0s; }
+.stat-card:nth-child(2) { transition-delay: 0.15s; }
+.stat-card:nth-child(3) { transition-delay: 0.3s; }
+.stat-card:nth-child(4) { transition-delay: 0.45s; }
+
+/* Staggered delays for gallery images */
+.gallery-grid img:nth-child(1) { transition-delay: 0s; }
+.gallery-grid img:nth-child(2) { transition-delay: 0.15s; }
+.gallery-grid img:nth-child(3) { transition-delay: 0.3s; }
