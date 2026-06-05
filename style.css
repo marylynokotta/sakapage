@@ -535,3 +535,77 @@ footer{
 .gallery-grid img {
   cursor: pointer;
 }
+
+/* QUOTES */
+.quotes {
+  padding: 100px 10%;
+  background: #0b0f1a;
+  text-align: center;
+}
+
+.quotes-inner {
+  max-width: 750px;
+  margin: 0 auto;
+  position: relative;
+  min-height: 180px;
+}
+
+.quote-card {
+  display: none;
+  animation: fadeQuote 0.5s ease;
+}
+
+.quote-card.active {
+  display: block;
+}
+
+@keyframes fadeQuote {
+  from { opacity: 0; transform: translateY(15px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.quote-mark {
+  font-size: 100px;
+  color: #00ff88;
+  line-height: 0.5;
+  display: block;
+  margin-bottom: 20px;
+  font-family: Georgia, serif;
+}
+
+.quote-card p {
+  font-size: 22px;
+  color: #e0e0e0;
+  line-height: 1.8;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.quote-card h4 {
+  color: #00ff88;
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+.quote-dots {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 35px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #333;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.dot.active {
+  background: #00ff88;
+  transform: scale(1.3);
+  }
+
+  

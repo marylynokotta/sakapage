@@ -108,3 +108,28 @@ lightbox.addEventListener('click', (e) => {
   }
 });
 
+// QUOTES ROTATOR
+const quoteCards = document.querySelectorAll('.quote-card');
+const dots = document.querySelectorAll('.dot');
+let currentQuote = 0;
+
+function showQuote(index) {
+  quoteCards.forEach(card => card.classList.remove('active'));
+  dots.forEach(dot => dot.classList.remove('active'));
+  quoteCards[index].classList.add('active');
+  dots[index].classList.add('active');
+  currentQuote = index;
+}
+
+dots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    showQuote(+dot.getAttribute('data-index'));
+  });
+});
+
+// Auto-rotate every 4 seconds
+setInterval(() => {
+  const next = (currentQuote + 1) % quoteCards.length;
+  showQuote(next);
+}, 4000);
+
