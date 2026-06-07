@@ -133,3 +133,15 @@ setInterval(() => {
   showQuote(next);
 }, 4000);
 
+
+// TIMELINE ARROWS
+const timelineScroll = document.querySelector('.timeline-scroll');
+const cardWidth = 285; // card width + gap
+
+document.getElementById('timelineNext').addEventListener('click', () => {
+  timelineScroll.scrollLeft += cardWidth;
+});
+
+document.getElementById('timelinePrev').addEventListener('click', () => {
+  timelineScroll.scrollLeft -= cardWidth;
+});
